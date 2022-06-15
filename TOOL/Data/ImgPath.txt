@@ -1,0 +1,16 @@
+Terrain|Tile|124|..\Texture\Stage\Terrain\Tile\Tile%d.png
+Player|Attack|6|..\Texture\Stage\Player\Attack\AKIHA_AKI01_00%d.png
+Player|Dash|11|..\Texture\Stage\Player\Dash\AKIHA_AKI13_00%d.png
+Player|Death|38|..\Texture\Stage\Player\Death\%d.png
+Player|Dir_B|101|..\Texture\Stage\Player\Dir_B\%d.png
+Player|Dir_L|101|..\Texture\Stage\Player\Dir_L\%d.png
+Player|Dir_LB|101|..\Texture\Stage\Player\Dir_LB\%d.png
+Player|Dir_LT|101|..\Texture\Stage\Player\Dir_LT\%d.png
+Player|Dir_T|101|..\Texture\Stage\Player\Dir_T\%d.png
+Player|Drinking|23|..\Texture\Stage\Player\Drinking\%d.png
+Player|Drop|31|..\Texture\Stage\Player\Drop\%d.png
+Player|Lie|6|..\Texture\Stage\Player\Lie\%d.png
+Player|Stand|12|..\Texture\Stage\Player\Stand\AKIHA_AKI00_00%d.png
+Player|StandUp|66|..\Texture\Stage\Player\StandUp\%d.png
+Player|WakeUp|65|..\Texture\Stage\Player\WakeUp\%d.png
+Player|Walk|13|..\Texture\Stage\Player\Walk\AKIHA_AKI26_00%d.png
