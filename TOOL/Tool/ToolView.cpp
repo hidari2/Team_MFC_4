@@ -42,7 +42,7 @@ END_MESSAGE_MAP()
 // CToolView 생성/소멸
 
 CToolView::CToolView()
-	: m_pDevice(CDevice::Get_Instance()), create_tile(true), create_monster(false), m_pBossmonster(nullptr), m_pMonster1(nullptr), m_pMonster2(nullptr),Monsterid(0)
+	: m_pDevice(CDevice::Get_Instance()), create_tile(true), create_monster(false), m_pBossmonster(nullptr), m_pMonster1(nullptr), m_pMonster2(nullptr),Monsterid(0), m_pBack(nullptr), Groundid(0)
 	//, m_pSingle(nullptr)
 {
 	// TODO: 여기에 생성 코드를 추가합니다.
@@ -91,6 +91,10 @@ void CToolView::OnInitialUpdate()
 	m_pTerrain = new CTerrain;
 	m_pTerrain->Initialize();
 	m_pTerrain->Set_MainView(this);
+
+	m_pBack = new Back;
+	m_pBack->Initialize();
+	m_pBack->Set_MainView(this);
 }
 
 // CToolView 그리기
@@ -146,7 +150,7 @@ void CToolView::OnDraw(CDC* /*pDC*/)
 
 
 	m_pDevice->Render_Begin();
-
+	m_pBack->Render(Groundid);
 	m_pTerrain->Render();
 
 	if (m_pBossmonster)
@@ -313,6 +317,7 @@ void CToolView::OnDestroy()
 
 
 	Safe_Delete<CTerrain*>(m_pTerrain);
+	Safe_Delete<Back*>(m_pBack);
 	Safe_Delete<CBossmonster*>(m_pBossmonster);
 	Safe_Delete<CMonster1*>(m_pMonster1);
 	Safe_Delete<CMonster2*>(m_pMonster2);

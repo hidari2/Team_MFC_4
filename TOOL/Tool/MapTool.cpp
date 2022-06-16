@@ -50,6 +50,8 @@ BEGIN_MESSAGE_MAP(CMapTool, CDialog)
 	ON_CBN_SELCHANGE(IDC_COMBO1, &CMapTool::OnCbnSelchangeCombo1)
 	ON_BN_CLICKED(IDC_BUTTON4, &CMapTool::OnBnClickedButton4)
 	ON_BN_CLICKED(IDC_BUTTON3, &CMapTool::OnBnClickedBack1)
+	ON_BN_CLICKED(IDC_BUTTON5, &CMapTool::OnBnClickedButton5)
+	ON_BN_CLICKED(IDC_BUTTON6, &CMapTool::OnBnClickedButton6)
 END_MESSAGE_MAP()
 
 
@@ -435,15 +437,50 @@ BOOL CMapTool::OnInitDialog()
 }
 
 
-void CMapTool::OnBnClickedButton4()
-{
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-}
+
 
 
 void CMapTool::OnBnClickedBack1()
 {
+	UpdateData(TRUE);
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	
+	CMainFrame*		pMainFrm = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());
+	CToolView*		pView = dynamic_cast<CToolView*>(pMainFrm->m_MainSplitter.GetPane(0, 1));
+	pView->Groundid= 0;
+	pView->Invalidate(FALSE);
+	UpdateData(FALSE);
+}
 
+void CMapTool::OnBnClickedButton4()
+{
+	UpdateData(TRUE);
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	CMainFrame*		pMainFrm = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());
+	CToolView*		pView = dynamic_cast<CToolView*>(pMainFrm->m_MainSplitter.GetPane(0, 1));
+	pView->Groundid = 1;
+	pView->Invalidate(FALSE);
+	UpdateData(FALSE);
+}
+
+void CMapTool::OnBnClickedButton5()
+{
+	UpdateData(TRUE);
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	CMainFrame*		pMainFrm = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());
+	CToolView*		pView = dynamic_cast<CToolView*>(pMainFrm->m_MainSplitter.GetPane(0, 1));
+	pView->Groundid = 2;
+	pView->Invalidate(FALSE);
+	UpdateData(FALSE);
+}
+
+
+void CMapTool::OnBnClickedButton6()
+{
+	UpdateData(TRUE);
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	CMainFrame*		pMainFrm = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());
+	CToolView*		pView = dynamic_cast<CToolView*>(pMainFrm->m_MainSplitter.GetPane(0, 1));
+	pView->Groundid = 3;
+	pView->Invalidate(FALSE);
+	UpdateData(FALSE);
 }

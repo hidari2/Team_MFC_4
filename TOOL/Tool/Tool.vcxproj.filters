@@ -162,7 +162,7 @@
     <ClInclude Include="Monster2.h">
       <Filter>07 .Monster</Filter>
     </ClInclude>
-    <ClInclude Include="..\Client\BackGround.h">
+    <ClInclude Include="Back.h">
       <Filter>08. BackGround</Filter>
     </ClInclude>
   </ItemGroup>
@@ -239,7 +239,7 @@
     <ClCompile Include="Monster2.cpp">
       <Filter>07 .Monster</Filter>
     </ClCompile>
-    <ClCompile Include="..\Client\BackGround.cpp">
+    <ClCompile Include="Back.cpp">
       <Filter>08. BackGround</Filter>
     </ClCompile>
   </ItemGroup>

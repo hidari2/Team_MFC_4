@@ -34,7 +34,7 @@ void CTerrain::Initialize(void)
 
 			pTile->vPos = { fX, fY, 0.f };
 			pTile->vSize = { (float)TILECX, (float)TILECY, 0.f };
-			pTile->byDrawID = 3;
+			pTile->byDrawID = 123;
 			pTile->byOption = 0;
 
 			pTile->iIndex = i * TILEX + j;

@@ -17,6 +17,9 @@
 #define		TILEX			20
 #define		TILEY			30
 
+#define		BACKX			3000
+#define		BACKY			1688
+
 #define		MIN_STR			64
 #define		MAX_STR			256
 
