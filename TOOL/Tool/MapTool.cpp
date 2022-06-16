@@ -384,7 +384,7 @@ void CMapTool::OnCbnSelchangeCombo1()
 	}
 	else if (iSel == 3)
 	{
-		for (int i = 104; i <123; ++i)
+		for (int i = 104; i <124; ++i)
 		{
 			//DragQueryFile(hDropInfo, i, szFilePath, MAX_PATH);
 			//CString	strRelative = CFileInfo::ConvertRelativePath(szFilePath);
