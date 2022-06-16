@@ -34,8 +34,6 @@ void CUnitTool::DoDataExchange(CDataExchange* pDX)
 
 	CDialog::DoDataExchange(pDX);
 
-	DDX_Text(pDX, IDC_EDIT1, m_strTemp);
-	DDX_Text(pDX, IDC_EDIT2, m_strCopy);
 	DDX_Text(pDX, IDC_EDIT3, m_strName);
 	DDX_Text(pDX, IDC_EDIT4, m_iHp);
 	DDX_Text(pDX, IDC_EDIT5, m_iAttack);
@@ -47,13 +45,13 @@ void CUnitTool::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CHECK1, m_Check[0]);
 	DDX_Control(pDX, IDC_CHECK2, m_Check[1]);
 	DDX_Control(pDX, IDC_CHECK3, m_Check[2]);
-	DDX_Control(pDX, IDC_BUTTON3, m_Bitmap);
 	DDX_Text(pDX, IDC_EDIT6, m_strSearchData);
+	DDX_Control(pDX, IDC_PICTURE, m_Picture);
 }
 
 
 BEGIN_MESSAGE_MAP(CUnitTool, CDialog)
-	ON_BN_CLICKED(IDC_BUTTON1, &CUnitTool::OnPushString)
+	
 	ON_BN_CLICKED(IDC_BUTTON2, &CUnitTool::OnAdd_Charactor)
 	ON_LBN_SELCHANGE(IDC_LIST1, &CUnitTool::OnListBox)
 	ON_WM_DESTROY()
@@ -163,6 +161,27 @@ void CUnitTool::OnListBox()
 	if (iter->second->byItem & SAPPHIRE)
 		m_Check[2].SetCheck(TRUE);
 
+	if (m_Radio[0].GetCheck())
+	{
+		m_Idrawid = 52;
+	}
+	if (m_Radio[1].GetCheck())
+	{
+		m_Idrawid = 100;
+	}
+	if (m_Radio[2].GetCheck())
+	{
+		m_Idrawid = 0;
+	}
+	CString	strRelative;
+
+	strRelative.Format(_T("../Texture/Stage/Player/Dir_B/%d.png"), m_Idrawid);
+
+	CImage*		pPngImg = new CImage;
+
+	pPngImg->Load(strRelative);	// 해당 경로의 이미지 로드
+
+	m_Picture.SetBitmap(*pPngImg);
 
 	UpdateData(FALSE);
 }
@@ -188,9 +207,7 @@ BOOL CUnitTool::OnInitDialog()
 
 	m_Radio[0].SetCheck(TRUE);
 
-	HBITMAP		hBitMap = (HBITMAP)LoadImage(nullptr, L"../Texture/JusinLogo1.bmp", IMAGE_BITMAP, 100, 50, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-
-	m_Bitmap.SetBitmap(hBitMap);
+	
 
 
 	return TRUE;  // return TRUE unless you set the focus to a control

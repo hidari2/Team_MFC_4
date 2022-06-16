@@ -43,11 +43,13 @@ public:
 	int m_iHp;
 	int m_iAttack;
 
+	int m_Idrawid=0;
 	// control
 	CListBox m_ListBox;
 	CButton m_Radio[3];
 	CButton m_Check[3];
-	CButton m_Bitmap;
+
+	CStatic m_Picture;
 
 	// general
 	map<CString, UNITDATA*>			m_MapUnitData;
