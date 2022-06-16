@@ -63,7 +63,7 @@ void CMyForm::OnInitialUpdate()
 	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
 
 	// CreatePointFont(폰트 크기, 서체)
-	m_Font.CreatePointFont(180, L"궁서");
+	m_Font.CreatePointFont(130, L"궁서");
 
 	// GetDlgItem : 다이얼로그에 배치된 리소스를 ID 값에 따라 얻어오는 함수
 	GetDlgItem(IDC_BUTTON1)->SetFont(&m_Font);

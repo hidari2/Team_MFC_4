@@ -45,4 +45,8 @@ public:
 	map<CString, CImage*>			m_MapPngImg;
 	afx_msg void OnCbnSelchangeCombo1();
 	virtual BOOL OnInitDialog();
+	afx_msg void OnBnClickedButton4();
+	afx_msg void OnBnClickedBack1();
+	afx_msg void OnBnClickedButton5();
+	afx_msg void OnBnClickedButton6();
 };

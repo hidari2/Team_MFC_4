@@ -9,6 +9,7 @@
 #include "Bossmonster.h"
 #include "Monster1.h"
 #include "Monster2.h"
+#include "Back.h"
 
 
 class CToolDoc;
@@ -46,13 +47,18 @@ public:
 	bool create_tile;
 	bool create_monster;
 	int  Monsterid;
+	int  Groundid;
 
 	CTerrain*			Get_Terrain(void) {	return m_pTerrain;	}
+	Back*			Get_Back(void) { return m_pBack; }
 	CBossmonster*		Get_Bossmonster(void) { return m_pBossmonster; }
 
 protected:
 	CDevice*			m_pDevice;
 	CTerrain*			m_pTerrain;
+	Back*				m_pBack;
+	
+
 	CBossmonster*		m_pBossmonster;
 	CMonster1*		    m_pMonster1;
 	CMonster2*		    m_pMonster2;

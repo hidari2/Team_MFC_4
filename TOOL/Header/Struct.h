@@ -37,6 +37,15 @@ typedef struct tagTile
 	int			iParentIndex;
 
 }TILE;
+typedef struct tagBack
+{
+	D3DXVECTOR3	vPos;
+	D3DXVECTOR3 vSize;
+
+	BYTE		byOption;
+	BYTE		byDrawID;
+
+}BACK;
 
 typedef	struct tagUnitData
 {
