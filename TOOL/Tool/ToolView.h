@@ -53,6 +53,8 @@ public:
 protected:
 	CDevice*			m_pDevice;
 	CTerrain*			m_pTerrain;
+	
+
 	CBossmonster*		m_pBossmonster;
 	CMonster1*		    m_pMonster1;
 	CMonster2*		    m_pMonster2;

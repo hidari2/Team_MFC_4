@@ -76,6 +76,9 @@
     <Filter Include="07 .Monster">
       <UniqueIdentifier>{840e5b24-9092-4a38-99ba-3b4dcd265c6b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="08. BackGround">
+      <UniqueIdentifier>{f8a82c0c-6034-4e84-8b98-3e368507ed4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -159,6 +162,9 @@
     <ClInclude Include="Monster2.h">
       <Filter>07 .Monster</Filter>
     </ClInclude>
+    <ClInclude Include="..\Client\BackGround.h">
+      <Filter>08. BackGround</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tool.cpp">
@@ -232,6 +238,9 @@
     </ClCompile>
     <ClCompile Include="Monster2.cpp">
       <Filter>07 .Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Client\BackGround.cpp">
+      <Filter>08. BackGround</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

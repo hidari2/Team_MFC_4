@@ -48,6 +48,8 @@ BEGIN_MESSAGE_MAP(CMapTool, CDialog)
 	ON_BN_CLICKED(IDC_BUTTON1, &CMapTool::OnSaveData)
 	ON_BN_CLICKED(IDC_BUTTON2, &CMapTool::OnBringImage)
 	ON_CBN_SELCHANGE(IDC_COMBO1, &CMapTool::OnCbnSelchangeCombo1)
+	ON_BN_CLICKED(IDC_BUTTON4, &CMapTool::OnBnClickedButton4)
+	ON_BN_CLICKED(IDC_BUTTON3, &CMapTool::OnBnClickedBack1)
 END_MESSAGE_MAP()
 
 
@@ -430,4 +432,18 @@ BOOL CMapTool::OnInitDialog()
 	TileCombo.SetCurSel(4);
 	return FALSE;  // return TRUE unless you set the focus to a control
 				   // 예외: OCX 속성 페이지는 FALSE를 반환해야 합니다.
+}
+
+
+void CMapTool::OnBnClickedButton4()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+}
+
+
+void CMapTool::OnBnClickedBack1()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	
+
 }
